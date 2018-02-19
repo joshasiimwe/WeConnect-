@@ -1,0 +1,43 @@
+<<!-- results.html-->
+
+{% extends "base.html" %}
+{% block title %}Search{% endblock %}
+{% block body %}
+<div class="jumbotron">
+  <h1>Search for businesses around you</h1>
+  <p class="lead">Now you can search for your business according to category and location</p>
+</div>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for businesses..">
+
+<ul id="myUL">
+  <li><a href="#">by category</a></li>
+  <li><a href="#">by location</a></li>
+
+</ul>
+<h1>Give your review</h1>
+<table style="width:100%">
+  <tr>
+    <th>Business</th>
+    <th>Location</th> 
+    <th>Category</th>
+  </tr>
+  <tr>
+    <td>Andela</td>
+    <td>Kampala</td> 
+    <td>Technology</td>
+  </tr>
+
+</table>
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+
+
+
+{% endblock %}
