@@ -1,0 +1,17 @@
+<!-- home.html-->
+
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block body %}
+<div class="jumbotron">
+  <h1>Make your business easy to find</h1>
+  <p class="lead">Read and write reviews on other businesses</p>
+</div>
+<h1>Sign up</h1>
+<br>
+<form action="" method="post">
+    <input type="text" placeholder="Username" name="username" value="{{ request.form.username}}">
+    <input type="password" placeholder="Password" name="password" value="{{request.form.password}}">
+<input class="btn btn-default" type="submit" value="Login">
+</form>
+{% endblock %}

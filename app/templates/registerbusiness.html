@@ -1,0 +1,17 @@
+<!-- registerbusiness.html-->
+
+{% extends "base.html" %}
+{% block title %}Register business{% endblock %}
+{% block body %}
+<div class="jumbotron">
+  <h1>Make your business easy to find.</h1>
+  <p class="lead">Read and write reviews on businesses in your location.</p>
+</div>
+<h1>Please register business</h1>
+<br>
+<form action="" method="post">
+    <input type="text" placeholder="business" name="andela" value="{{ request.form.business}}">
+    <input type="text" placeholder="location" name="kampala" value="{{request.form.location}}">
+<input class="btn btn-default" type="submit" value="Register">
+</form>
+{% endblock %}

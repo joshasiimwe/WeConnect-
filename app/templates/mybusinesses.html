@@ -1,0 +1,27 @@
+<!-- mybusinesses.html-->
+
+{% extends "base.html" %}
+{% block title %}My businesses{% endblock %}
+{% block body %}
+<div class="jumbotron">
+  <h1>Already a member?</h1>
+  <p class="lead">Keep your business details up to date.</p>
+</div>
+<table style="width:100%">
+  <tr>
+    <th>Business</th>
+    <th>Location</th> 
+    <th>Category</th>
+    <th>Owner</th>
+  </tr>
+  <tr>
+    <td>simba</td>
+    <td>kampala</td> 
+    <td>Technology</td>
+    <td>Joshua</td>
+  </tr>
+</table>
+
+<input class="btn btn-default" type="submit" value="Update business profile">
+<input class="btn btn-default" type="submit" value="Delete business profile">
+{% endblock %}
