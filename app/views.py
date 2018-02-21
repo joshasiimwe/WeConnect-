@@ -15,8 +15,8 @@ def about():
         if request.form['username'] !='username' or request.form['password'] !='password':
             error='Invalid credentials'
         else:
-            return redirect(url_for('home'))
-    return render_template("index.html",error=error)
+            return redirect(url_for('/'))
+    return render_template("about.html",error=error)
     
 @app.route("/registerbusiness", methods=['GET','POST'])
 def registerbusiness():
@@ -43,7 +43,7 @@ def login():
         if request.form['username'] !='username' or request.form['password'] !='password':
             error='Invalid credentials'
         else:
-            return redirect(url_for('/'))
+            return redirect(url_for('home'))
     return render_template("login.html",error=error)
 
 @app.route("/results")

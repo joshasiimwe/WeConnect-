@@ -29,6 +29,9 @@
       <footer class="footer">
         <p>© 2018 WeConnect</p>
       </footer>
+      {%if error%}
+        <p class="error"><strong>Error:</strong> {{error}}</p>
+      {%endif%}
     </div> <!-- /container -->
   </body>
 </html>
