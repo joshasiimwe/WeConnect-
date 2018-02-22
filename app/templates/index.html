@@ -1,0 +1,16 @@
+<!-- index.html-->
+
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block body %}
+<div class="jumbotron">
+    <h1>Make your business easy to find</h1>
+    <p class="lead">Read and write reviews on other businesses</p>
+</div>
+<h1>Welcome to WeConnect</h1>
+<br>
+<p>Click <a href="/login">here</a> to logout.</p>
+{% for message in get_flashed_messages() %}
+    {{ message }}
+{% endfor %}
+{% endblock %}
