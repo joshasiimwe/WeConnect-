@@ -12,11 +12,11 @@
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation"><a href="/">Home</a></li>
-            <li role="presentation"><a href="/registerbusiness">Register business</a></li>
-            <li role="presentation"><a href="/mybusinesses">My businesses</a></li>
-            <li role="presentation"><a href="/results">Search</a></li>
-            <!--<li role="presentation"><a href="/signup">Sign Up</a></li>-->
+            <li role="presentation"><a href="/login">Home</a></li>
+            <li role="presentation"><a href="/login">Register business</a></li>
+            <li role="presentation"><a href="/login">My businesses</a></li>
+            <li role="presentation"><a href="/login">Search</a></li>
+            <li role="presentation"><a href="/signup">Sign Up</a></li>
             <li role="presentation"><a href="/login">Log Out</a></li>
             <!--<li role="presentation"><a href="http://flask.pocoo.org" target="_blank">More About Flask</a></li>-->
           </ul>
@@ -25,29 +25,29 @@
       {% block body %}
       {% endblock %}
       
-      {%if error%}
-        <p class="error"><strong>Error:</strong> {{error}}</p>
-      {%endif%}
-    </div> <!-- /container -->
+    
+    </div><!-- /container -->
     <div class="jumbotron">
         <h1>Make your business easy to find</h1>
         <p class="lead">Read and write reviews on other businesses</p>
-      </div>
-      <h1>Sign up</h1>
-      <br>
-      <form action="/">
-          <input type="text" placeholder="Username" name="username" value="{{ request.form.username}}">
-          <input type="password" placeholder="Password" name="password" value="{{request.form.password}}">
-      <input class="btn btn-default" type="submit" value="Sign Up">
+    </div>
+    
+    
       <h1>Please login</h1>
       <br>
-      <form action="/">
-          <input type="text" placeholder="Username" name="admin" value="{{ request.form.username}}">
-          <input type="password" placeholder="Password" name="admin" value="{{request.form.password}}">
+      <form action="home">
+          <input type="text" placeholder="username" name="admin" value="{{ request.form.username}}">
+          <input type="password" placeholder="password" name="admin" value="{{request.form.password}}">
       <input class="btn btn-default" type="submit" value="Login">
       </form>
+      {%if error%}
+        <p class="error"><strong>Error:</strong> {{error}}</p>
+      {%endif%}
+      {% for message in get_flashed_messages() %}
+        {{ message }}
+      {% endfor %}
       <footer class="footer">
-        <p>© 2018 WeConnect</p>
-      </footer>
+        <p>� 2018 WeConnect</p>
+      </footer>>
   </body>
 </html>
